@@ -1,0 +1,40 @@
+.footermovie {
+    /* border: 2px solid rgb(10, 185, 71); */
+    width: 290px;
+    height: 350px;
+    margin-left: 60px;
+    margin-bottom: -120px;
+    
+  }
+  .footermovie h4 {
+    /* border: 2px solid rgb(10, 185, 71); */
+    /* line-height: 6px; */
+    font-size: 1.5rem;
+    font-weight: 500;
+    /* line-height: 1.2; */
+    margin-top: 60px;
+    
+  }
+  .footermovie p {
+    /* border: 2px solid rgb(10, 185, 71); */
+    margin-top: -8px;
+    cursor: pointer;
+   
+    font-size: 14px;
+    color: #8f8f8f;
+    
+  }
+  .genre:hover {
+  color: red !important;
+  }
+  .genrlist {
+    /* border: 2px solid rgb(185, 10, 10); */
+  display: flex;
+  gap: 50px;
+  
+  /* flex-wrap: wrap; */
+  
+  
+  }
+  
+  

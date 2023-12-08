@@ -1,0 +1,15 @@
+footer {
+    /* border: black solid 6px; */
+    text-align: center!important;
+    border-top: 1px solid #dee2e6!important;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #7b7b7b;
+    margin-bottom: 15px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    position: relative;
+    top: 70px;
+    
+    
+}

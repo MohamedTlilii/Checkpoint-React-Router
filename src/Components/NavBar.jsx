@@ -1,57 +1,44 @@
-// import React, { useState } from "react";
-import "./Style.css";
-import ReactStars from "react-stars";
-import { VscDebugRestart } from "react-icons/vsc";
+// import { Button } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
 
-function NavBar({ setSearch, setRate, rate }) {
+function NavBar() {
   return (
-    <div className="navbar-container">
-      <div className="navbar-logo">
-        <span style={{ color: "white" }}>You</span>
-        <span style={{ color: "red" }}>video.</span>
-      </div>
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand>
+          <span style={{ color: "black" }}>You</span>
+          <span style={{ color: "red" }}>video.</span>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link>
+              <Link to="/">Home</Link>{" "}
+            </Nav.Link>
+            
+            <Nav.Link>
+              <Link to="/movies">Movies</Link>{" "}
+            </Nav.Link>
+            <Nav.Link>Shows</Nav.Link>
+            <Nav.Link>Premium</Nav.Link>
+            <Nav.Link>Pages</Nav.Link>
+            <Nav.Link>Admin</Nav.Link>
+            <Nav.Link>Contact Us</Nav.Link>
 
-      <ReactStars
-        onChange={(newRating) => {
-          setRate(newRating);
-        }}
-        count={5}
-        size={24}
-        color2={"white"}
-        value={rate}
-        half={false}
-        className="stars"
-      />
-      <VscDebugRestart className="restart-btn"
-        onClick={() => {
-          setRate(0);
-        }}
-        color="white"
-        size={"20"}
-      />
+            <button className="btn-login-register">
+              <Link to="/login">Login</Link>{" "}
+            </button>
 
-      <input
-        type="text"
-        id="searchInput"
-        placeholder="Search.."
-        onChange={(e) => {
-          setSearch(e.target.value);
-        }}
-      ></input>
-      <ul>
-        <li>Demos</li>
-        <li>Movies</li>
-        <li>Shows</li>
-        <li>Premium</li>
-        <li>Pages</li>
-        <li>Admin</li>
-        <li>Contact Us</li>
-        <li>
-          {" "}
-          <button>Login</button>{" "}
-        </li>
-      </ul>
-    </div>
+            <button className="btn-login-register">
+              <Link to="/register">Register</Link>{" "}
+            </button>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 

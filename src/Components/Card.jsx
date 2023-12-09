@@ -1,5 +1,5 @@
 import React from "react";
-import "./Style.css";
+import "../App.css";
 // import ReactStars from "react-stars";
 
 const Card = ({ image, tittle, descrption, rating }) => {

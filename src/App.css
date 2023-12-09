@@ -1,3 +1,174 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* Home page */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  margin: 100px auto;
+}
+/* Movies page */
+.movies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  margin: 100px auto;
+}
+/* Movie page */
+.movie {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+}
+/* Login page */
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  margin: 100px auto;
+}
+.login-form {
+  border: 2px rgba(95, 95, 95, 0.155) solid;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+/* Register page */
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  margin: 100px auto;
+}
+.register-form {
+  border: 2px rgba(95, 95, 95, 0.155) solid;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+/* btn login and register */
+.btn-login-register {
+  all: unset;
+  background-color: red;
+
+  width: 90px;
+  height: 40px;
+  text-align: center;
+  border-radius: 0.25rem;
+}
+/* Movies section */
+.btn-btn {
+  all: unset;
+  /* border: 2px solid black; */
+  display: flex;
+  border-radius: 3px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 6px;
+  height: 20px;
+}
+.restart-btn {
+  /* border: solid white 2px; */
+  margin-right: 26px;
+}
+.List-containr-movies {
+  /* border: 2px solid red; */
+  height: 30vh;
+  width: 108vh;
+  margin: auto;
+  padding: 70px;
+}
+.List-containr-btns {
+  /* border: 2px solid black; */
+  display: flex;
+  gap: 20px;
+}
+.intro-containr {
+  /* border: 2px rgb(195, 255, 0) solid; */
+  display: flex;
+  justify-content: space-between;
+
+  gap: 265px;
+  /* margin: 25px; */
+  align-items: center;
+}
+
+.intro-containr h2 {
+  font-size: 2rem;
+  margin: 15px;
+}
+#searchInput {
+  width: 18%;
+
+  border: 1px solid #000;
+  border-radius: 30px;
+  font-size: 16px;
+
+  background-image: url("https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-24.png");
+
+  background-position: 10px 7px;
+  background-repeat: no-repeat;
+  padding: 8px 20px 8px 40px;
+
+  opacity: 0.9;
+}
+/*  */
+.card-lsit {
+  display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card-cadre {
+  /* border:  2px solid orange; */
+  margin: 15px;
+}
+.card-containr {
+  border: 1px solid rgba(220, 217, 217, 0);
+  background-color: hsl(210, 50%, 98%);
+  width: 251px;
+  height: 350px;
+}
+.card-containr img {
+  /* filter: brightness(0.5); */
+
+  object-fit: cover;
+  cursor: pointer;
+
+  vertical-align: middle;
+}
+
+.card-containr h6 {
+  font-weight: 600;
+  color: #8f8f8f;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-left: 15px;
+  font-size: larger;
+  letter-spacing: 0.2px;
+}
+h6:hover {
+  color: red;
+}
+.card-containr p {
+  color: #303030;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: -40px;
+  margin-left: 15px;
+}
+.icon-card {
+  /* margin-left: 15px; */
+  /* border: 2px solid red; */
+  position: absolute;
+  /* bottom: 350px; */
+  font-size: 10px;
+  margin-left: 150px;
+  margin-top: -65px;
 }

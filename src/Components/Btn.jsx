@@ -1,5 +1,5 @@
 import React from "react";
-import "./Style.css";
+import "../App.css";
 
 function Btn(props) {
   return <button className="btn-btn">{props.content}</button>;

@@ -200,6 +200,7 @@
 .card-cadre {
   /* border:  2px solid orange; */
   margin: 15px;
+  height: 410px;
 }
 .card-containr {
   border: 1px solid rgba(220, 217, 217, 0);
@@ -217,12 +218,12 @@
 }
 
 .card-containr h6 {
-  font-weight: 600;
+  /* font-weight: 600; */
   color: #8f8f8f;
-  cursor: pointer;
+  /* cursor: pointer; */
   margin-top: 8px;
   margin-left: 15px;
-  font-size: larger;
+  font-size: medium;
   letter-spacing: 0.2px;
 }
 h6:hover {
@@ -230,8 +231,8 @@ h6:hover {
 }
 .card-containr p {
   color: #303030;
-  font-weight: 700;
-  cursor: pointer;
+ 
+ font-size: xx-small;
 
   margin-left: 15px;
 }

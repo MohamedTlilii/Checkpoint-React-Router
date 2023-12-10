@@ -72,13 +72,13 @@ function ListMovies({ search, rate }) {
               }}
             />
           </Form.Group>
-          <button className="btn-btn"
+          <Button className="btn-btn"
             onClick={() => {
               handleAddNewMovie();
             }}
           >
             Add movie
-          </button>
+          </Button>
         </Form>
       <div className="card-lsit">
         {movies

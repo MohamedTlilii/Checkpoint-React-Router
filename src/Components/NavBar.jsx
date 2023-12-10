@@ -53,11 +53,12 @@ function NavBar({ setSearch, setRate }) {
             ></input>
             <div className="ratinggg">
               <ReactStars
-                // half={false}
+                // value={rating}
                 count={5}
-                // onChange={ratingChanged}
+                color={"white"}
                 size={24}
-                color2={"#ffd700"}
+                edit={true}
+                half={false}
                 onChange={(newRating) => {
                   setRate(newRating);
                 }}

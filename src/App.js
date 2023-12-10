@@ -9,11 +9,12 @@ import Register from "./Pages/Register";
 import React, { useState } from "react";
 function App() {
   const [search, setSearch] = useState(""); 
+  const [rate, setRate] = useState(0); 
   return (
     <Routes>
-      <Route path="/" element={<PublicLayout setSearch={setSearch}  />}>
+      <Route path="/" element={<PublicLayout setSearch={setSearch} setRate={setRate}  />}>
         <Route index element={<Home />} />
-        <Route path="/movies" element={<ListMovies search={search} />} />
+        <Route path="/movies" element={<ListMovies search={search} rate={rate} />} />
       </Route>
       <Route path="/" element={<ConnexionLayout />}>
         <Route path="login" element={<Login />} />

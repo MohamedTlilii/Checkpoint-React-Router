@@ -2,14 +2,14 @@ import FooterSection from "../Components/FooterSection/FooterSection";
 import Footer from "../Components/Footer/Footer";
 
 import React, { useState } from "react";
-import ReactStars from "react-stars";
-import { VscDebugRestart } from "react-icons/vsc";
+// import ReactStars from "react-stars";
+// import { VscDebugRestart } from "react-icons/vsc";
 import Btn from "../Components/Btn";
 import "../App.css";
 import Card from "../Components/Card";
 import Data from "../Data";
 
-function ListMovies({ search }) {
+function ListMovies({ search,rate }) {
   const [movies] = useState(Data);
   return (
     <div className="List-containr-movies">
@@ -17,15 +17,7 @@ function ListMovies({ search }) {
         <h1>Movies</h1>
         <h4>Genre:</h4>
       </div>
-      <div className="ratinggg">
-        <ReactStars
-          count={5}
-          // onChange={ratingChanged}
-          size={24}
-          color2={"#ffd700"}
-        />
-        <VscDebugRestart className="restart-btn" color="black" size={"20"} />
-      </div>
+      
       <div className="search-movies"></div>
       <div className="List-containr-btns">
         <Btn content="Action" />
@@ -44,7 +36,7 @@ function ListMovies({ search }) {
         {movies
           .filter((movie) =>
             movie.tittle.toLowerCase().includes(search.toLowerCase())
-          )
+          ).filter((movie)=> (rate?movie.rating === rate:movie))
 
           .map((movie, i) => (
             <Card key={i} {...movie} />

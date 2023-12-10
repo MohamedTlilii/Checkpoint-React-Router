@@ -3,11 +3,11 @@ import NavBar from "../Components/NavBar"
 import { Outlet } from "react-router-dom";
 
 
-function PublicLayout({ children, setSearch }) {
+function PublicLayout({ children, setSearch, setRate }) {
 
   return (
     <div>
-      <NavBar       setSearch={setSearch} />
+      <NavBar       setSearch={setSearch} setRate={setRate} />
       <Outlet />
     </div>
   );

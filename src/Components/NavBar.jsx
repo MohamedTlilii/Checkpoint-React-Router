@@ -1,8 +1,9 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import React from "react";
-
-function NavBar({ setSearch }) {
+import ReactStars from "react-stars";
+import { VscDebugRestart } from "react-icons/vsc";
+function NavBar({ setSearch, setRate }) {
   // const [search, setSearch] = useState("");
   return (
     <Navbar id="nav-bacground-color" expand="lg" className="bg-body-tertiary">
@@ -50,6 +51,23 @@ function NavBar({ setSearch }) {
                 setSearch(e.target.value);
               }}
             ></input>
+            <div className="ratinggg">
+              <ReactStars
+                half={false}
+                count={5}
+                // onChange={ratingChanged}
+                size={24}
+                color2={"#ffd700"}
+                onChange={(newRating) => {
+                  setRate(newRating);
+                }}
+              />
+              <VscDebugRestart
+                className="restart-btn"
+                color="white"
+                size={"20"}
+              />
+            </div>
           </Nav>
         </Navbar.Collapse>
       </Container>

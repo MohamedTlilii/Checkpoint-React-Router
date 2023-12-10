@@ -9,7 +9,7 @@ import "../App.css";
 import Card from "../Components/Card";
 import Data from "../Data";
 
-function ListMovies({ search,rate }) {
+function ListMovies({ search, rate }) {
   const [movies] = useState(Data);
   return (
     <div className="List-containr-movies">
@@ -17,7 +17,7 @@ function ListMovies({ search,rate }) {
         <h1>Movies</h1>
         <h4>Genre:</h4>
       </div>
-      
+
       <div className="search-movies"></div>
       <div className="List-containr-btns">
         <Btn content="Action" />
@@ -36,7 +36,8 @@ function ListMovies({ search,rate }) {
         {movies
           .filter((movie) =>
             movie.tittle.toLowerCase().includes(search.toLowerCase())
-          ).filter((movie)=> (rate?movie.rating === rate:movie))
+          )
+          .filter((movie) => (rate ? movie.rating === rate : movie))
 
           .map((movie, i) => (
             <Card key={i} {...movie} />

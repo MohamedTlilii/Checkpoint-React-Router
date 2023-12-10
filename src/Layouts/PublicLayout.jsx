@@ -3,7 +3,7 @@ import NavBar from "../Components/NavBar"
 import { Outlet } from "react-router-dom";
 
 
-function PublicLayout({ children, setSearch, setRate }) {
+function PublicLayout({ setSearch, setRate }) {
 
   return (
     <div>

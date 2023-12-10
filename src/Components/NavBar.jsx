@@ -53,7 +53,7 @@ function NavBar({ setSearch, setRate }) {
             ></input>
             <div className="ratinggg">
               <ReactStars
-                half={false}
+                // half={false}
                 count={5}
                 // onChange={ratingChanged}
                 size={24}
@@ -66,6 +66,9 @@ function NavBar({ setSearch, setRate }) {
                 className="restart-btn"
                 color="white"
                 size={"20"}
+                onClick={() => {
+                  setRate(0);
+                }}
               />
             </div>
           </Nav>

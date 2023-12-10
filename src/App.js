@@ -5,7 +5,7 @@ import Home from "./Pages/Home";
 import ListMovies from "./Pages/ListMovies";
 import ConnexionLayout from "./Layouts/ConnexionLayout";
 import Login from "./Pages/Login";
-import Register from "./Pages/Register"
+import Register from "./Pages/Register";
 function App() {
   return (
     <Routes>

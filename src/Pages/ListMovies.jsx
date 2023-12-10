@@ -1,4 +1,5 @@
 import FooterSection from "../Components/FooterSection/FooterSection";
+import Footer from "../Components/Footer/Footer"
 
 import React, { useState } from "react";
 import ReactStars from "react-stars";
@@ -16,17 +17,20 @@ function ListMovies() {
         <h1>Movies</h1>
         <h4>Genre:</h4>
       </div>
-      <input type="text" id="searchInput" placeholder="Search.."></input>
-      <div>
-        <ReactStars
+     <div className="ratinggg">
+     <ReactStars 
           count={5}
           // onChange={ratingChanged}
           size={24}
           color2={"#ffd700"}
         />
-      </div>
-      <div>
-        <VscDebugRestart className="restart-btn" color="black" size={"20"} />
+         <VscDebugRestart className="restart-btn" color="black" size={"20"} />
+     </div>
+      <div className="search-movies">
+      <input type="text" id="searchInput" placeholder="Search.."></input>
+        
+      
+       
       </div>
       <div className="List-containr-btns">
         <Btn content="Action" />
@@ -42,12 +46,14 @@ function ListMovies() {
         <Btn content="View All" />
       </div>
       <div className="card-lsit">
-        {movies.map((movie, i) => (
+        {movies
+        
+        .map((movie, i) => (
           <Card key={i} {...movie} />
         ))}
       </div>
-
-      <FooterSection />
+      <FooterSection id="footer-movies-section"/>
+      <Footer/>
     </div>
   );
 }

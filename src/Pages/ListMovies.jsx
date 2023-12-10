@@ -1,5 +1,5 @@
 import FooterSection from "../Components/FooterSection/FooterSection";
-import Footer from "../Components/Footer/Footer"
+import Footer from "../Components/Footer/Footer";
 
 import React, { useState } from "react";
 import ReactStars from "react-stars";
@@ -9,7 +9,7 @@ import "../App.css";
 import Card from "../Components/Card";
 import Data from "../Data";
 
-function ListMovies() {
+function ListMovies({ search }) {
   const [movies] = useState(Data);
   return (
     <div className="List-containr-movies">
@@ -17,21 +17,16 @@ function ListMovies() {
         <h1>Movies</h1>
         <h4>Genre:</h4>
       </div>
-     <div className="ratinggg">
-     <ReactStars 
+      <div className="ratinggg">
+        <ReactStars
           count={5}
           // onChange={ratingChanged}
           size={24}
           color2={"#ffd700"}
         />
-         <VscDebugRestart className="restart-btn" color="black" size={"20"} />
-     </div>
-      <div className="search-movies">
-      <input type="text" id="searchInput" placeholder="Search.."></input>
-        
-      
-       
+        <VscDebugRestart className="restart-btn" color="black" size={"20"} />
       </div>
+      <div className="search-movies"></div>
       <div className="List-containr-btns">
         <Btn content="Action" />
         <Btn content="Adventure" />
@@ -47,13 +42,16 @@ function ListMovies() {
       </div>
       <div className="card-lsit">
         {movies
-        
-        .map((movie, i) => (
-          <Card key={i} {...movie} />
-        ))}
+          .filter((movie) =>
+            movie.tittle.toLowerCase().includes(search.toLowerCase())
+          )
+
+          .map((movie, i) => (
+            <Card key={i} {...movie} />
+          ))}
       </div>
-      <FooterSection id="footer-movies-section"/>
-      <Footer/>
+      <FooterSection id="footer-movies-section" />
+      <Footer />
     </div>
   );
 }

@@ -11,11 +11,12 @@ import Movie from "./Components/Movie";
 function App() {
   const [search, setSearch] = useState(""); 
   const [rate, setRate] = useState(0); 
+  const [newMovie, ] = useState(); 
   return (
     <Routes>
       <Route path="/" element={<PublicLayout setSearch={setSearch} setRate={setRate}  />}>
         <Route index element={<Home />} />
-        <Route path="/movies" element={<ListMovies search={search} rate={rate} />} />
+        <Route path="/movies" element={<ListMovies search={search} rate={rate} newMovie={newMovie} />} />
         <Route path="/movie" element={<Movie/>} />
       </Route>
       <Route path="/" element={<ConnexionLayout />}>

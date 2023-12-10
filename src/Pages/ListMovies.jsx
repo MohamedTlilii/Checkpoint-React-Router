@@ -1,5 +1,6 @@
 import FooterSection from "../Components/FooterSection/FooterSection";
 import Footer from "../Components/Footer/Footer";
+import { Button, Form } from "semantic-ui-react";
 
 import React, { useState } from "react";
 // import ReactStars from "react-stars";
@@ -11,7 +12,12 @@ import Data from "../Data"
 
 
 function ListMovies({ search, rate }) {
-  const [movies] = useState(Data);
+
+  const [movies, setMovies] = useState(Data);
+  const [newMovie, setnewMovie] = useState({});
+  const handleAddNewMovie = () => {
+    setMovies([...movies, newMovie]);
+  };
   
   return (
     <div className="List-containr-movies">
@@ -34,6 +40,46 @@ function ListMovies({ search, rate }) {
         <h2>Latest Movies</h2>
         <Btn content="View All" />
       </div>
+      <Form>
+          <Form.Group widths="equal">
+            <Form.Input
+              type="text"
+              placeholder="Title"
+              onChange={(e) => {
+                setnewMovie({ ...newMovie, tittle: e.target.value });
+              }}
+            />
+            <Form.Input
+              type="text"
+              placeholder="Movie poster url"
+              onChange={(e) => {
+                setnewMovie({ ...newMovie, image: e.target.value });
+              }}
+            />
+            <Form.Input
+              type="number"
+              min={1}
+              max={5}
+              onChange={(e) => {
+                setnewMovie({ ...newMovie, rating: e.target.value });
+              }}
+            />
+            <Form.Input
+              type="text"
+              placeholder="Resume"
+              onChange={(e) => {
+                setnewMovie({ ...newMovie, descrption: e.target.value });
+              }}
+            />
+          </Form.Group>
+          <Button
+            onClick={() => {
+              handleAddNewMovie();
+            }}
+          >
+            Add movie
+          </Button>
+        </Form>
       <div className="card-lsit">
         {movies
           .filter((movie) =>

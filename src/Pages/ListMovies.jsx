@@ -1,13 +1,15 @@
+import FooterSection from "../Components/FooterSection/FooterSection";
+
 import React, { useState } from "react";
 import ReactStars from "react-stars";
 import { VscDebugRestart } from "react-icons/vsc";
 import Btn from "../Components/Btn";
 import "../App.css";
 import Card from "../Components/Card";
-import Data from "../Data"
+import Data from "../Data";
 
 function ListMovies() {
-  const [movies, ] = useState(Data);
+  const [movies] = useState(Data);
   return (
     <div className="List-containr-movies">
       <div>
@@ -40,11 +42,12 @@ function ListMovies() {
         <Btn content="View All" />
       </div>
       <div className="card-lsit">
-      {movies.map((movie, i) => (
+        {movies.map((movie, i) => (
           <Card key={i} {...movie} />
         ))}
-
       </div>
+
+      <FooterSection />
     </div>
   );
 }

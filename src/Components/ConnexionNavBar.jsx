@@ -6,14 +6,17 @@ import { Link } from "react-router-dom";
 
 function ConnexionNavBar() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar id="conx-nav-bacground-color" expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand>Youvideo.</Navbar.Brand>
+        <Navbar.Brand >
+        <span style={{ color: "white" }}>You</span>
+          <span style={{ color: "red" }}>video.</span>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link>
-              <Link to="/">Home</Link>
+              <Link style={{color:"white" , }} to="/">Home</Link>
             </Nav.Link>
             
           </Nav>

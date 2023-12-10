@@ -1,0 +1,43 @@
+.footermovie {
+    /* border: 2px solid rgb(10, 185, 71); */
+    width: 290px;
+    height: 350px;
+    margin-left: 60px;
+    margin-bottom: -30px;
+    color: white;
+    
+  }
+  .footermovie h4 {
+    /* border: 2px solid rgb(10, 185, 71); */
+    /* line-height: 6px; */
+    font-size: 1.5rem;
+    font-weight: 500;
+    /* line-height: 1.2; */
+    margin-top: 60px;
+    color: white;
+    
+  }
+  .footermovie p {
+    /* border: 2px solid rgb(10, 185, 71); */
+    margin-top: 15px;
+    cursor: pointer;
+   
+    font-size: 14px;
+    color: #8f8f8f;
+    color: white;
+    
+  }
+  .genre:hover {
+  color: red !important;
+  }
+  .genrlist {
+    /* border: 2px solid rgb(185, 10, 10); */
+  display: flex;
+  gap: 50px;
+  
+  /* flex-wrap: wrap; */
+  
+  
+  }
+  
+  

@@ -7,10 +7,12 @@ import React, { useState } from "react";
 import Btn from "../Components/Btn";
 import "../App.css";
 import Card from "../Components/Card";
-import Data from "../Data";
+import Data from "../Data"
+
 
 function ListMovies({ search, rate }) {
   const [movies] = useState(Data);
+  
   return (
     <div className="List-containr-movies">
       <div>

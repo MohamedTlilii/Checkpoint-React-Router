@@ -30,7 +30,6 @@
 }
 /* Movies page */
 .movies {
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,9 +40,21 @@
 /* Movie page */
 .movie {
   display: flex;
-  align-items: flex-start;
-  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/b4c7f092-0488-48b7-854d-ca055a84fb4f/b0be67e5-d52f-4ef1-9496-c9d3054cad3b/TN-en-20231204-popsignuptwoweeks-perspective_alpha_website_large.jpg)!important;
 }
+.card-containar {
+  border: solid 2px black !important;
+  width: 1250px!important;
+  height: 550px!important;
+  
+
+}
+
+
+
 /* Login page */
 .login {
   display: flex;
@@ -124,11 +135,9 @@
 }
 .restart-btn {
   /* border: solid rgb(6, 6, 6) 2px; */
-position: relative;
-top: 10px;
-left: 5px;
-
- 
+  position: relative;
+  top: 10px;
+  left: 5px;
 }
 .List-containr-movies {
   /* border: 2px solid red; */
@@ -143,7 +152,6 @@ left: 5px;
 }
 .ratinggg {
   display: flex;
-  
 }
 
 .List-containr-btns {
@@ -179,7 +187,6 @@ left: 5px;
   padding: 8px 20px 8px 40px;
 
   opacity: 0.9;
-  
 }
 /*  */
 .card-lsit {
@@ -240,3 +247,5 @@ h6:hover {
 .footer-home-section {
   border: 2px solid rgb(245, 245, 245);
 }
+
+/*  */

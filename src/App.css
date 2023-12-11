@@ -37,6 +37,65 @@
   min-height: 50vh;
   /* margin: 100px auto; */
 }
+.card-lsit {
+  /* border:  2px solid orange; */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  gap: 25px;
+  
+}
+.card-cadre {
+  /* border:  2px solid orange; */
+  margin: 15px;
+  height: 410px;
+  /* background-color: black; */
+}
+.card-containr {
+  border: 1px solid rgba(220, 217, 217, 0);
+  background-color: hsl(210, 50%, 98%);
+  width: 251px;
+  height: 350px;
+}
+.card-containr img {
+  /* filter: brightness(0.5); */
+
+  object-fit: cover;
+  cursor: pointer;
+
+  vertical-align: middle;
+}
+
+.card-containr h6 {
+  /* font-weight: 600; */
+  color: #8f8f8f;
+  /* cursor: pointer; */
+  margin-top: 8px;
+  margin-left: 15px;
+  font-size: medium;
+  letter-spacing: 0.2px;
+}
+h6:hover {
+  color: red;
+}
+.card-containr p {
+  color: #303030;
+ 
+ font-size: xx-small;
+
+  margin-left: 15px;
+}
+.icon-card {
+  /* margin-left: 15px; */
+  /* border: 2px solid red; */
+  position: absolute;
+  /* bottom: 350px; */
+  font-size: 10px;
+  margin-left: 150px;
+  margin-top: -65px;
+}
+
 
 /* Movie page */
 .movie {
@@ -48,6 +107,8 @@
   background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/b4c7f092-0488-48b7-854d-ca055a84fb4f/b0be67e5-d52f-4ef1-9496-c9d3054cad3b/TN-en-20231204-popsignuptwoweeks-perspective_alpha_website_large.jpg)!important;
 
  }
+ 
+
 .card-container {
   /* border: solid 2px black !important; */
   width: 950px!important;
@@ -55,6 +116,9 @@
   border-radius: 30px!important;
   
 
+}
+.trailer-youtube-vedio {
+  border-radius: 30px;
 }
 
 
@@ -193,62 +257,7 @@
   opacity: 0.9;
 }
 /*  */
-.card-lsit {
-  /* border:  2px solid orange; */
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  min-height: 100vh;
-  gap: 25px;
-}
-.card-cadre {
-  /* border:  2px solid orange; */
-  margin: 15px;
-  height: 410px;
-}
-.card-containr {
-  border: 1px solid rgba(220, 217, 217, 0);
-  background-color: hsl(210, 50%, 98%);
-  width: 251px;
-  height: 350px;
-}
-.card-containr img {
-  /* filter: brightness(0.5); */
 
-  object-fit: cover;
-  cursor: pointer;
-
-  vertical-align: middle;
-}
-
-.card-containr h6 {
-  /* font-weight: 600; */
-  color: #8f8f8f;
-  /* cursor: pointer; */
-  margin-top: 8px;
-  margin-left: 15px;
-  font-size: medium;
-  letter-spacing: 0.2px;
-}
-h6:hover {
-  color: red;
-}
-.card-containr p {
-  color: #303030;
- 
- font-size: xx-small;
-
-  margin-left: 15px;
-}
-.icon-card {
-  /* margin-left: 15px; */
-  /* border: 2px solid red; */
-  position: absolute;
-  /* bottom: 350px; */
-  font-size: 10px;
-  margin-left: 150px;
-  margin-top: -65px;
-}
 .footer-home-section {
   border: 2px solid rgb(245, 245, 245);
 }

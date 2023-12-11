@@ -25,7 +25,7 @@ function Movie() {
         <ReactPlayer url={movie.trailer} />
 
         <Card.Body className="titlle-movie">
-          <Card.Title>{movie.tittle}</Card.Title>
+          <Card.Title style={{ color: "red" }}>{movie.tittle}</Card.Title>
           <Card.Text>{movie.descrption}</Card.Text>
         </Card.Body>
       </Card>

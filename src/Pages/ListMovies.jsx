@@ -5,13 +5,15 @@ import React, { useState } from "react";
 // import ReactStars from "react-stars";
 // import { VscDebugRestart } from "react-icons/vsc";
 import Btn from "../Components/Btn";
+import { v4 as uuidv4 } from "uuid";
 import "../App.css";
 import Card from "../Components/Card";
+import Data from "../Data";
 
 function ListMovies({ search, rate, movies, setMovies }) {
   const [newMovie, setnewMovie] = useState({});
   const handleAddNewMovie = () => {
-    setMovies([...movies, newMovie]);
+    setMovies([...movies, { ...newMovie, id: uuidv4() }]);
   };
 
   return (
@@ -66,6 +68,13 @@ function ListMovies({ search, rate, movies, setMovies }) {
               setnewMovie({ ...newMovie, descrption: e.target.value });
             }}
           />
+          <Form.Input
+            type="text"
+            placeholder="Movie trailer url"
+            onChange={(e) => {
+              setnewMovie({ ...newMovie, trailer: e.target.value });
+            }}
+          />
         </Form.Group>
         <Button
           className="btn-btn"
@@ -83,7 +92,7 @@ function ListMovies({ search, rate, movies, setMovies }) {
             movie.tittle.toLowerCase().includes(search.toLowerCase())
           )
           .filter((movie) => (rate ? movie.rating === rate : movie))
-
+          .reverse()
           .map((movie, i) => (
             <Card key={i} {...movie} />
           ))}

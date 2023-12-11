@@ -4,9 +4,9 @@ import Data from "../Data";
 import { useParams } from "react-router-dom";
 import ReactPlayer from "react-player/youtube";
 import "../App.css";
-function Movie() {
+function Movie({ movies }) {
   let { id } = useParams();
-  let movie = Data.find((movie) => movie.id === id);
+  let movie = movies.find((movie) => movie.id === id);
   // const videoStyle = {
   //   borderRadius: "30px",
   //   overflow: "hidden",

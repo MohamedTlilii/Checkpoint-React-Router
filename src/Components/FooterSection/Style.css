@@ -1,16 +1,16 @@
 .footerSection {
-  /* border: 2px solid black; */
+  border: 2px solid black;
   /* height: 35vh; */
   /* background-color: hsl(210, 16%, 98%); */
   display: flex;
   justify-content: center;
   align-items: center;
-  width:1900px;
+  width:2000px;
   margin-top: 35px;
   background-color: rgba(0,0,0,.75);
 
  position: relative;
- right: 500px;
+ right: 600px;
  top: 70px;
  
 }
@@ -20,7 +20,7 @@
   height: 250px;
   /* margin-top:-30px ; */
   margin-left: 190px;
-  margin-bottom: -50px;
+  margin-bottom: -90px;
 }
 span {
   /* border: 2px solid rgb(185, 10, 10); */

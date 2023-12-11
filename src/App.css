@@ -107,18 +107,25 @@ h6:hover {
   background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/b4c7f092-0488-48b7-854d-ca055a84fb4f/b0be67e5-d52f-4ef1-9496-c9d3054cad3b/TN-en-20231204-popsignuptwoweeks-perspective_alpha_website_large.jpg)!important;
 
  }
- 
+ .titlle-movie { 
+  /* border: solid 2px black !important; */
+  margin-top: 140px;
+  
+ }
 
 .card-container {
   /* border: solid 2px black !important; */
   width: 950px!important;
-  height: 650px!important;
+  height: 610px!important;
   border-radius: 30px!important;
   
 
 }
-.trailer-youtube-vedio {
+iframe {
   border-radius: 30px;
+  width: 950px;
+  height: 500px
+
 }
 
 

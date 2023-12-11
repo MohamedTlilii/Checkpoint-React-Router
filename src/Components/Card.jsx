@@ -3,7 +3,7 @@ import "../App.css";
 // import ReactStars from "react-stars";
 import { Link } from "react-router-dom";
 
-const Card = ({ image, tittle, descrption, rating }) => {
+const Card = ({ image, tittle, descrption, rating , id }) => {
   return (
     <div className="card-cadre">
       <div className="card-containr">
@@ -14,7 +14,7 @@ const Card = ({ image, tittle, descrption, rating }) => {
             alt={tittle}
           />
         </div>
-        <Link to="/movie">
+        <Link to={ `/movie/${id}`}>
           <h6>{tittle}</h6>
         </Link>
         <span className="icon-card">{"⭐".repeat(rating)}</span>

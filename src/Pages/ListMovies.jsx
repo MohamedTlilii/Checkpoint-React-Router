@@ -1,24 +1,19 @@
 import FooterSection from "../Components/FooterSection/FooterSection";
 import Footer from "../Components/Footer/Footer";
 import { Button, Form } from "semantic-ui-react";
-
 import React, { useState } from "react";
 // import ReactStars from "react-stars";
 // import { VscDebugRestart } from "react-icons/vsc";
 import Btn from "../Components/Btn";
 import "../App.css";
 import Card from "../Components/Card";
-import Data from "../Data"
 
-
-function ListMovies({ search, rate }) {
-
-  const [movies, setMovies] = useState(Data);
+function ListMovies({ search, rate, movies, setMovies }) {
   const [newMovie, setnewMovie] = useState({});
   const handleAddNewMovie = () => {
     setMovies([...movies, newMovie]);
   };
-  
+
   return (
     <div className="List-containr-movies">
       <div>
@@ -41,45 +36,47 @@ function ListMovies({ search, rate }) {
         <Btn content="View All" />
       </div>
       <Form>
-          <Form.Group widths="equal">
-            <Form.Input
-              type="text"
-              placeholder="Title"
-              onChange={(e) => {
-                setnewMovie({ ...newMovie, tittle: e.target.value });
-              }}
-            />
-            <Form.Input
-              type="text"
-              placeholder="Movie poster url"
-              onChange={(e) => {
-                setnewMovie({ ...newMovie, image: e.target.value });
-              }}
-            />
-            <Form.Input
-              type="number"
-              min={1}
-              max={5}
-              onChange={(e) => {
-                setnewMovie({ ...newMovie, rating: e.target.value });
-              }}
-            />
-            <Form.Input
-              type="text"
-              placeholder="Resume"
-              onChange={(e) => {
-                setnewMovie({ ...newMovie, descrption: e.target.value });
-              }}
-            />
-          </Form.Group>
-          <Button className="btn-btn"
-            onClick={() => {
-              handleAddNewMovie();
+        <Form.Group widths="equal">
+          <Form.Input
+            type="text"
+            placeholder="Title"
+            onChange={(e) => {
+              setnewMovie({ ...newMovie, tittle: e.target.value });
             }}
-          >
-            Add movie
-          </Button>
-        </Form>
+          />
+          <Form.Input
+            type="text"
+            placeholder="Movie poster url"
+            onChange={(e) => {
+              setnewMovie({ ...newMovie, image: e.target.value });
+            }}
+          />
+          <Form.Input
+            type="number"
+            min={1}
+            max={5}
+            onChange={(e) => {
+              setnewMovie({ ...newMovie, rating: e.target.value });
+            }}
+          />
+          <Form.Input
+            type="text"
+            placeholder="Resume"
+            onChange={(e) => {
+              setnewMovie({ ...newMovie, descrption: e.target.value });
+            }}
+          />
+        </Form.Group>
+        <Button
+          className="btn-btn"
+          onClick={() => {
+            handleAddNewMovie();
+          }}
+        >
+          Add movie
+        </Button>
+      </Form>
+
       <div className="card-lsit">
         {movies
           .filter((movie) =>

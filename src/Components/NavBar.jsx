@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import ReactStars from "react-stars";
 import { VscDebugRestart } from "react-icons/vsc";
-function NavBar({ setSearch, setRate }) {
+function NavBar({ setSearch, setRate, rating }) {
   // const [search, setSearch] = useState("");
   return (
     <Navbar id="nav-bacground-color" expand="lg" className="bg-body-tertiary">
@@ -53,7 +53,7 @@ function NavBar({ setSearch, setRate }) {
             ></input>
             <div className="ratinggg">
               <ReactStars
-                // value={rating}
+                value={rating}
                 count={5}
                 color={"white"}
                 size={24}

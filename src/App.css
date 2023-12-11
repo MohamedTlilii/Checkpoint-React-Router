@@ -30,6 +30,7 @@
 }
 /* Movies page */
 .movies {
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,16 +40,19 @@
 
 /* Movie page */
 .movie {
+  
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/b4c7f092-0488-48b7-854d-ca055a84fb4f/b0be67e5-d52f-4ef1-9496-c9d3054cad3b/TN-en-20231204-popsignuptwoweeks-perspective_alpha_website_large.jpg)!important;
-}
-.card-containar {
-  border: solid 2px black !important;
-  width: 1250px!important;
-  height: 550px!important;
+
+ }
+.card-container {
+  /* border: solid 2px black !important; */
+  width: 950px!important;
+  height: 650px!important;
+  border-radius: 30px!important;
   
 
 }
